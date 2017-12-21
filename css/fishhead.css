@@ -1,0 +1,42 @@
+.canvas{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	width: 35%;
+	height: 35%;
+	position: relative;
+
+	padding-top: 5%;
+
+}
+.head{
+	position: absolute;
+
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+
+	width: 60%;
+	height: 60%;
+	border-top: 3px solid var(--main_color);
+	border-left: 3px solid var(--main_color);
+	transform: rotate(-45deg);
+	float: left;
+}
+.head:first-of-type{
+	margin-right: -20%;
+	margin-bottom: -20%; 
+}
+
+.eye{
+	border:solid 3px var(--main_color);
+	width: 25%;
+	height: 25%;
+	border-radius: 1000%;
+	margin: 5px 0 0 11px;
+}

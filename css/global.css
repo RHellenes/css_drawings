@@ -1,0 +1,160 @@
+*{
+	box-sizing: border-box;
+}
+:root{
+	--main_color:#0F151E;
+}
+@font-face{ 
+	font-family: 'Geomanist Medium';
+	src: url('../fonts/geomanist-medium-webfont.eot');
+	src: url('../fonts/geomanist-medium-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/geomanist-medium-webfont.woff') format('woff'),
+	     url('../fonts/geomanist-medium-webfont.ttf') format('truetype'),
+	     url('../fonts/geomanist-medium-webfont.svg#webfont') format('svg');
+}
+@font-face{
+	font-family:'Geomanist Regular';
+	src: url('../fonts/geomanist-regular-webfont.eot');
+	src: url('../fonts/geomanist-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/geomanist-regular-webfont.woff') format('woff'),
+	     url('../fonts/geomanist-regular-webfont.ttf') format('truetype'),
+	     url('../fonts/geomanist-regular-webfont.svg#webfont') format('svg');
+
+}
+
+body{
+	background-color: #fcfeff;
+	margin: 0;
+}
+header{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	font-family: 'Roboto Mono', monospace;
+	color: #0F151E;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.15);
+	z-index: 100;
+}
+header > img{
+	height: 3em;
+	margin: 1.2em;
+}
+header > span{
+	font-size: 1.2em;
+	margin-top: 8px;
+}
+
+main{
+	
+}
+
+.frame-width{
+	width: 80%;
+	position: relative;
+	margin: 15px 10%;
+	float: left;
+	
+}
+.frame-width:before{
+	content:"";
+	display: block;
+	padding-top:130%;
+}
+.frame{
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right: 0;
+
+	background-color: #F7FAFC;
+}
+
+.image-width{
+	width: 85%;
+	position: relative;
+	margin:7.5% 7.5% 2.5% 7.5%;
+}
+
+.image-width:before{
+	content:"";
+	display: block;
+	padding-top:100%;
+}
+.image{
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right: 0;
+
+	overflow: hidden;
+
+	background-color: #fff;
+}
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.text{
+	width: 85%;
+	margin: 0 7.5%;
+	padding:10px 0;
+}
+a{
+	color: #0F151E;
+	text-decoration: none;
+}
+a:visited{
+	color: #0F151E;
+}
+
+h3{
+	margin: 0 0 5px 0;
+	font-size: 1.5em;
+	letter-spacing: .7px;
+	font-family: 'Geomanist Medium', sans-serif;
+}
+
+p{
+	font-family: 'Geomanist Regular', sans-serif;
+	margin: 0;
+}
+
+/* Drawing sites */
+
+
+
+
+
+
+@media only screen and (min-width: 500px){
+	.frame-width{
+		/*Two columns*/
+		width: 45%;
+		margin: 15px 2.5%;
+	
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.frame-width{
+		/*Three columns*/
+		width: 30%;
+		margin: 15px calc(10%/6);
+
+	
+	}
+}
+
+@media only screen and (min-width: 1024px){
+	.frame-width{
+		/*Four columns*/
+		width: 22.5%;
+		margin: 15px calc(10%/8);
+	
+	}
+}
