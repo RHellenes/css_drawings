@@ -1,6 +1,6 @@
 :root {
   --fieldGreen: #229954;
-  --chalk: #ffffff;
+  --chalk: rgb(252, 250, 240);
   --chalkThickness: 1px;
 }
 .centeringClass {
