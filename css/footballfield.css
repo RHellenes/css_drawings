@@ -1,7 +1,62 @@
 :root {
-  --fieldGreen: #229954;
+  --fieldGreen: #1e9b52;
+  --fieldGreenLight: #1bb159;
   --chalk: rgb(252, 250, 240);
   --chalkThickness: 1px;
+
+  --fieldGradient: linear-gradient(
+    to bottom,
+    var(--fieldGreen) 0%,
+    var(--fieldGreen) 4%,
+    var(--fieldGreenLight) 4%,
+    var(--fieldGreenLight) 8%,
+    var(--fieldGreen) 8%,
+    var(--fieldGreen) 12%,
+    var(--fieldGreenLight) 12%,
+    var(--fieldGreenLight) 16%,
+    var(--fieldGreen) 16%,
+    var(--fieldGreen) 20%,
+    var(--fieldGreenLight) 20%,
+    var(--fieldGreenLight) 24%,
+    var(--fieldGreen) 24%,
+    var(--fieldGreen) 28%,
+    var(--fieldGreenLight) 28%,
+    var(--fieldGreenLight) 32%,
+    var(--fieldGreen) 32%,
+    var(--fieldGreen) 36%,
+    var(--fieldGreenLight) 36%,
+    var(--fieldGreenLight) 40%,
+    var(--fieldGreen) 40%,
+    var(--fieldGreen) 44%,
+    var(--fieldGreenLight) 44%,
+    var(--fieldGreenLight) 48%,
+    var(--fieldGreen) 48%,
+    var(--fieldGreen) 52%,
+    var(--fieldGreenLight) 52%,
+    var(--fieldGreenLight) 56%,
+    var(--fieldGreen) 56%,
+    var(--fieldGreen) 60%,
+    var(--fieldGreenLight) 60%,
+    var(--fieldGreenLight) 64%,
+    var(--fieldGreen) 64%,
+    var(--fieldGreen) 68%,
+    var(--fieldGreenLight) 68%,
+    var(--fieldGreenLight) 72%,
+    var(--fieldGreen) 72%,
+    var(--fieldGreen) 76%,
+    var(--fieldGreenLight) 76%,
+    var(--fieldGreenLight) 80%,
+    var(--fieldGreen) 80%,
+    var(--fieldGreen) 84%,
+    var(--fieldGreenLight) 84%,
+    var(--fieldGreenLight) 88%,
+    var(--fieldGreen) 88%,
+    var(--fieldGreen) 92%,
+    var(--fieldGreenLight) 92%,
+    var(--fieldGreenLight) 96%,
+    var(--fieldGreen) 96%,
+    var(--fieldGreen) 100%
+  );
 }
 .centeringClass {
   display: flex;
@@ -17,6 +72,7 @@
   width: 68%;
   height: 98%;
   background: var(--fieldGreen);
+
   border-radius: 3px;
 }
 .fieldArea {
@@ -30,6 +86,7 @@
     inset var(--chalkThickness) 0 0 var(--chalk),
     inset 0 var(--chalkThickness) 0 var(--chalk);
   overflow: hidden;
+  background: var(--fieldGradient);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -95,6 +152,29 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  /* background: var(--fieldGreen); */
+  z-index: 1000;
+}
+
+.goalHalfCircle {
+}
+
+.penaltyMark {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  width: calc(var(--chalkThickness) * 2);
+  height: calc(var(--chalkThickness) * 2);
+  background: var(--chalk);
+}
+.penaltyMark1 {
+  top: 10.47%;
+}
+.penaltyMark2 {
+  bottom: 10.47%;
 }
 .otherSide {
   bottom: 0;
@@ -110,7 +190,7 @@
   top: 0;
   border-top: none;
 }
-.sixteenMeter:last-child .elevenMeter {
+.elevenMeter2 {
   bottom: 0;
   top: auto;
   border-top: solid var(--chalk) var(--chalkThickness);

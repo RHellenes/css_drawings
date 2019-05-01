@@ -1,23 +1,21 @@
+// DOM elements
 const flags = document.querySelectorAll('.flagCircle');
 const field = document.querySelector('.fieldArea')
 const centerCircle = document.querySelector('.centerCircle')
 const singleFlag = document.querySelector('.flagCircle');
 
-//let fieldHeight = field.offsetHeight
-//let fieldWidth = field.offsetWidth
+// DOM element height
 let flagHeight = singleFlag.offsetHeight
 let centerCircleHeight = centerCircle.offsetHeight
-//let centerCircleWidth = singleFlag.offsetWidth
 
 
+// Adding the values on the initial load
 for (const flag of flags) {
   flag.setAttribute('style', 'width: ' + flagHeight + 'px;');
 }
 centerCircle.setAttribute('style', 'width: ' + centerCircleHeight + 'px;');
-console.log(centerCircleHeight);
-//console.log(centerCircleWidth);
 
-
+// a function to reset the values
 function getNewValuesAfterResize() {
 
   centerCircleHeight = centerCircle.offsetHeight
@@ -30,7 +28,5 @@ function getNewValuesAfterResize() {
   }
 }
 
-
-
-
+// Envoking the function on window reszie
 window.onresize = getNewValuesAfterResize;
