@@ -1,0 +1,127 @@
+:root {
+  --fieldGreen: #229954;
+  --chalk: #ffffff;
+  --chalkThickness: 1px;
+}
+.centeringClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.areaContainer {
+  width: 100%;
+  height: 100%;
+}
+.grassArea {
+  width: 68%;
+  height: 98%;
+  background: var(--fieldGreen);
+  border-radius: 3px;
+}
+.fieldArea {
+  position: relative;
+  width: 95%;
+  height: 95%;
+  box-shadow: inset calc(var(--chalkThickness) - (var(--chalkThickness) * 2)) 0
+      0 var(--chalk),
+    inset 0 calc(var(--chalkThickness) - (var(--chalkThickness) * 2)) 0
+      var(--chalk),
+    inset var(--chalkThickness) 0 0 var(--chalk),
+    inset 0 var(--chalkThickness) 0 var(--chalk);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.flagCircle {
+  position: absolute;
+
+  height: 4%;
+  min-height: 5px;
+  border-radius: 50%;
+  border: var(--chalk) solid var(--chalkThickness);
+}
+.flagCircle1 {
+  left: 0;
+  top: 0;
+  transform: translate(-40%, -40%);
+}
+.flagCircle2 {
+  right: 0;
+  top: 0;
+  transform: translate(40%, -40%);
+}
+.flagCircle3 {
+  left: 0;
+  bottom: 0;
+  transform: translate(-40%, 40%);
+}
+.flagCircle4 {
+  right: 0;
+  bottom: 0;
+  transform: translate(40%, 40%);
+}
+/* CenterLine */
+.fieldArea::before {
+  content: "";
+  position: absolute;
+  height: var(--chalkThickness);
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--chalk);
+}
+.fieldArea::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+
+  transform: translateY(-50%) translateX(-50%);
+  width: calc(var(--chalkThickness) * 4);
+  height: calc(var(--chalkThickness) * 4);
+  background: var(--chalk);
+}
+
+.sixteenMeter {
+  width: 59.26%;
+  height: 15.71%;
+  border: solid var(--chalk) var(--chalkThickness);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.otherSide {
+  bottom: 0;
+  top: auto;
+}
+.elevenMeter {
+  height: 33.33%;
+  width: 45.3%;
+  border: solid var(--chalk) var(--chalkThickness);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  border-top: none;
+}
+.sixteenMeter:last-child .elevenMeter {
+  bottom: 0;
+  top: auto;
+  border-top: solid var(--chalk) var(--chalkThickness);
+  border-bottom: none;
+}
+
+.centerCircle {
+  height: 20%;
+  border: solid var(--chalk) var(--chalkThickness);
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
