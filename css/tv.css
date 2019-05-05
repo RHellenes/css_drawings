@@ -1,0 +1,19 @@
+:root {
+  --black: rgb(36, 35, 35);
+}
+.tv-frame {
+  width: 80%;
+  min-height: 10px;
+  background: var(--black);
+  border-radius: 2px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3px;
+}
+.screen {
+  background: teal;
+  height: 100%;
+  width: 100%;
+}
